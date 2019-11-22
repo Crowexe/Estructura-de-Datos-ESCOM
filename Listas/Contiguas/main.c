@@ -57,7 +57,6 @@ ahorrar(struct Lista *lista)
 {
         struct Lista *tmp = NULL;
         tmp = inicializar ( tmp );
-        free ( tmp->datos );
         tmp->datos= (int *) malloc (sizeof(int)*lista->Nelementos/2);
         for(int i=0; i<lista->actual + 1; i++)
         {
@@ -115,38 +114,34 @@ insertar (struct Lista *lista, int dato)
 struct Lista *
 eliminar (struct Lista *lista, int dato)
 {
+	int i = 0;
 	if( seDesperdicia ( lista ) == 1)
 	{
 		lista = ahorrar ( lista );
 	} 
-	struct Lista *tmp = NULL;
-	
-	do 
+	while (lista->actual!=dato)
 	{
-		struct Lista *tmp = NULL;
-        	tmp = inicializar ( tmp );
-       		free ( tmp->datos );
-        	tmp->datos= (int *) malloc (sizeof(int)*lista->Nelementos/2);
-        	for(int i=0; i<lista->actual + 1; i++)
+		//int x = lista -> actual;
+		for (i=0; lista->actual+i<Nelementos; i++)
 		{
-			*(tmp->datos + i) = *(lista->datos + i);
-			*(lista->datos + i) = 0;
+			if(*(lista->datos)==dato)
+			{
+				lista->actual --;
+				break;
+			}
 		}
+		for(;i<
+}	
+	if(lista->actual==lista->Nelementos)
+	{
+		return 0;
 	}
-
-	while (lista->actual != dato);
-
-	for(int i=0; i<lista->actual + 1; i++)
-        {
-		if(*lista->datos == 0) 
-		{
-               		*(tmp->datos + i) = *(lista->datos + i + 1);
-		}
-		free( lista->datos );
-		lista->datos = tmp->datos;
-		lista->Nelementos = lista->Nelementos - 1;
+	for(int i=0;i==lista->Nelementos; i++)
+	{
+		lista->actual = lista->actual + 1;
 	}
-       	return lista;	
+	return lista;
+	
 }
 
 

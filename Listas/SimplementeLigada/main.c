@@ -121,6 +121,6 @@ int main (void)
         lista = insertar (lista, 91);
         lista = insertar (lista, 32);
         lista = insertar (lista, 27);
-	lista = eliminar (lista, 2019);
+	//lista = eliminar (lista, 2019);
 	mostrar ( lista );
 }
