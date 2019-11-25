@@ -6,12 +6,12 @@
 
 struct Circular
 {
-	int dato;
-	struct Circular *siguiente;
+  int dato;
+  struct Circular *siguiente;
 };
 
-int agregar(struct Circular **lista, int valor);
-int eliminar(struct Circular **lista, int valor);
-void mostrar(struct Circular *lista);
+int agregar (struct Circular **lista, int valor);
+int eliminar (struct Circular **lista, int valor);
+void mostrar (struct Circular *lista);
 
 #endif

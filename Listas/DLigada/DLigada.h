@@ -6,14 +6,14 @@
 
 struct Doble
 {
-	int dato;
-	struct Doble *siguiente;
-	struct Doble *anterior;
+  int dato;
+  struct Doble *siguiente;
+  struct Doble *anterior;
 };
 
-int agregar(struct Doble **lista, int valor);
-int eliminar(struct Doble **lista, int valor);
-void mostrar(struct Doble *lista);
-void mostrarInverso(struct Doble *lista);
+int agregar (struct Doble **lista, int valor);
+int eliminar (struct Doble **lista, int valor);
+void mostrar (struct Doble *lista);
+void mostrarInverso (struct Doble *lista);
 
-#endif 
+#endif
