@@ -6,8 +6,9 @@
 struct Cola
 {
   int *datos;
-  int actual;
+  int frente;
   int cuantos;
+  int atras;
 };
 
 void encolar (struct Cola **, int);

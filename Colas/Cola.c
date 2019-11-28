@@ -64,9 +64,10 @@ desencolar (struct Cola **cola, int dato)
     {
       return 0;
     }
-  for (i = 0; i <= (*cola)->actual; i++)
+   (*cola)->actual= 
+/*  for (i = 0; i <= (*cola)->actual; i++)
     {
-      if (*((*cola)->datos + i) == dato)
+      if (*((*cola)->datos + i) == cuantos)
 	{
 	  (*cola)->actual--;
 	  break;
@@ -92,7 +93,7 @@ desencolar (struct Cola **cola, int dato)
       free ((*cola)->datos);
       (*cola)->datos = temporal;
       (*cola)->cuantos = (*cola)->cuantos / 2;
-    }
+    }*/
 
 }
 
